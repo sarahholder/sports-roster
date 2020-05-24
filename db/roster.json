@@ -1,0 +1,139 @@
+{
+	"player1": {
+		"imageUrl": "https://utsports.com/images/2019/6/19/Guarantano_Jarrett.jpg?width=300",
+		"name": "Jarrett Guarantano",
+		"position": "QB",
+		"uid": "",
+		"number": 2,
+		"area": "offense"
+	},
+	"player2": {
+		"imageUrl": "https://utsports.com/images/2018/7/16/Tillman_Cedric.jpg?width=300",
+		"name": "Cedric Tillman",
+		"position": "WR",
+		"uid": "",
+		"number": 85,
+		"area": "offense"
+	},
+	"player3": {
+		"imageUrl": "https://utsports.com/images/2020/5/1/251024_20190611_FB_Headshot_AF_037.jpg?width=300",
+		"name": "Josh Palmer",
+		"position": "WR",
+		"uid": "",
+		"number": 5,
+		"area": "offense"
+	},
+	"player4": {
+		"imageUrl": "https://utsports.com/images/2019/6/19/Chandler_Ty.jpg?width=300",
+		"name": "Ty Chandler",
+		"position": "RB",
+		"uid": "",
+		"number": 8,
+		"area": "offense"
+	},
+	"player5": {
+		"imageUrl": "https://utsports.com/images/2019/6/19/Pope_Austin.jpg?width=300",
+		"name": "Austin Pope",
+		"position": "TE",
+		"uid": "",
+		"number": 81,
+		"area": "offense"
+	},
+	"player6": {
+		"imageUrl": "https://utsports.com/images/2019/6/19/Carvin_Jerome.jpg?width=300",
+		"name": "Jerome Carvin",
+		"position": "OC",
+		"uid": "",
+		"number": 75,
+		"area": "offense"
+	},
+	"player7": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/TO'173000.jpg",
+		"name": "Henry To'o To'o",
+		"position": "WLB",
+		"uid": "",
+		"number": 11,
+		"area": "defense"
+
+	},
+	"player8": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/EME172987.jpg",
+		"name": " Greg Emerson",
+		"position": "DT",
+		"uid": "",
+		"number": 90,
+		"area": "defense"
+	},
+	"player9": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/SOL172990.jpg",
+		"name": "Aubrey Solomon",
+		"position": "RDE",
+		"uid": "",
+		"number": 98,
+		"area": "defense"
+	},
+	"player10": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/JOH172993.jpg",
+		"name": "DeAndre Johnson",
+		"position": "JACK",
+		"uid": "",
+		"number": 13,
+		"area": "defense"
+	},
+	"player11": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/BEN172997.jpg",
+		"name": "Kivon Bennett",
+		"position": "OLB",
+		"uid": "",
+		"number": 95,
+		"area": "defense"
+	},
+	"player12": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/BRO173014.jpg",
+		"name": "Paxton Brooks",
+		"position": "PT",
+		"uid": "",
+		"number": 37,
+		"area": "Special Teams"
+	},
+	"player13": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/DOY173018.jpg",
+		"name": "Joe Doyle",
+		"position": "H",
+		"uid": "",
+		"number": 47,
+		"area": "Special Teams"
+	},
+	"player14": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/GRA172983.jpg",
+		"name": "Eric Gray",
+		"position": "PR",
+		"uid": "",
+		"number": 3,
+		"area": "Special Teams"
+	},
+	"player15": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/BRO173014.jpg",
+		"name": "Paxton Brooks",
+		"position": "PT",
+		"uid": "",
+		"number": 37,
+		"area": "Special Teams"
+	},
+	"player16": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/DOY173018.jpg",
+		"name": "Joe Doyle",
+		"position": "H",
+		"uid": "",
+		"number": 47,
+		"area": "Special Teams"
+	},
+	"player17": {
+		"imageUrl": "https://www.ourlads.com/images/players/ncaa/GRA172983.jpg",
+		"name": "Eric Gray",
+		"position": "PR",
+		"uid": "",
+		"number": 3,
+		"area": "Special Teams"
+	}
+}
