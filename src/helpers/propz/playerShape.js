@@ -7,6 +7,7 @@ const playerShape = PropTypes.shape({
   uid: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
+  area: PropTypes.string.isRequired,
 });
 
 export default { playerShape };

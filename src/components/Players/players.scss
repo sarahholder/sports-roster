@@ -1,0 +1,45 @@
+@import '../../styles/index.scss';
+
+.price-tag {
+  font-family: 'Trebuchet MS', sans-serif;
+  position: absolute;
+  text-align: center !important;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: $utOrange;
+  border-radius: 100%;
+  height:52px;
+  width: 52px;
+  padding: 10px;
+  top: 1.2rem;
+  right: 1.2rem;
+  color:white;
+}
+
+.card {
+  min-width: 350px;
+  min-height: 400px;
+  text-align: justify;
+
+}
+
+.card-body{
+  border-top: 10px solid $utOrange;
+}
+
+.delete {
+  float: right;
+}
+
+.card-img-top {
+  width: 390px;
+  height: 400px;
+  object-fit: cover;
+  object-position: 0 0;
+  align-content: center;
+}
+
+.card-title {
+font-weight: bold;
+}
+

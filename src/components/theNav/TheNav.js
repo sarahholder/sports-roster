@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import firebase from 'firebase/app';
+import firebase from 'firebase';
 import 'firebase/auth';
 
+import './theNav.scss';
 
-class theNav extends React.Component {
+class TheNav extends React.Component {
 static propTypes = {
   authed: PropTypes.bool.isRequired,
 }
@@ -19,26 +20,17 @@ render() {
 
   return (
     <div className="MyNavbar">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="#" className="navbar-brand">UT VOLS Roster</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarContent">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
+      <nav className="navbar navbar-light bg-light p-0">
+        <div className="navbar-brand p-0">UT Volunteers</div>
               {
                 authed
-                  ? <button className="navlink btn btn-danger" onClick={this.logMeOut}>Logout</button>
+                  ? <button className="btn btn-dark logout m-2" onClick={this.logMeOut}>Logout</button>
                   : ''
               }
-            </li>
-          </ul>
-        </div>
       </nav>
     </div>
   );
 }
 }
 
-export default theNav;
+export default TheNav;

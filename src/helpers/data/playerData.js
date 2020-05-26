@@ -4,7 +4,7 @@ import apiKeys from '../apiKeys.json';
 const baseUrl = apiKeys.firebaseKeys.databaseURL;
 
 const getPlayerByUid = (uid) => new Promise((resolve, reject) => {
-  axios.get(`${baseUrl}/players.json?orderBy="uid"&equalTo="${uid}"`)
+  axios.get(`${baseUrl}/roster.json?orderBy="uid"&equalTo="${uid}"`)
     .then((result) => {
       const playerCard = result.data;
       const roster = [];
@@ -19,6 +19,7 @@ const getPlayerByUid = (uid) => new Promise((resolve, reject) => {
     })
     .catch((err) => reject(err));
 });
+
 
 const deletePlayer = (playerId) => axios.delete(`${baseUrl}/roster/${playerId}.json`);
 
