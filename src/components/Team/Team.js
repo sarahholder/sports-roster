@@ -1,15 +1,17 @@
 import React from 'react';
+
 import playerData from '../../helpers/data/playerData';
 import authData from '../../helpers/data/authData';
 
 import Players from '../Players/Players';
+import PlayerForm from '../PlayerForm/PlayerForm';
 
 import './team.scss';
 
 class Team extends React.Component {
   state = {
     roster: [],
-    area: [],
+    formOpen: false,
   }
 
 getRoster = () => {
@@ -26,15 +28,27 @@ removePlayer = (playerId) => {
   playerData.deletePlayer(playerId)
     .then(() => this.getRoster())
     .catch((err) => console.error('Could not delete player: ', err));
-};
+}
+
+saveNewPlayer = (newPlayer) => {
+  playerData.saveNewPlayer(newPlayer)
+    .then(() => {
+      this.getRoster();
+      this.setState({ formOpen: false });
+    })
+    .catch((err) => console.error('unable to save new player: ', err));
+}
 
 render() {
-  const { roster } = this.state;
+  const { roster, formOpen } = this.state;
+
   const makeRoster = roster.map((player) => (<Players key={player.id} player={player} removePlayer={this.removePlayer}/>));
 
   return (
     <div className="Team">
       <img className="img-fluid" width="100%" src="https://utsports.com/images/2019/8/7/2020_Schedule_Release_Web.jpg?width=1061&height=597&mode=crop" alt="ut football schedule "/>
+      <button className="btn btn-warning m-2 mt-3" onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus"></i> New Player</button>
+      { formOpen ? <PlayerForm saveNewPlayer={this.saveNewPlayer}/> : ''}
       <div className="d-flex flex-wrap m-2 justify-content-center">
         {makeRoster}
       </div>
