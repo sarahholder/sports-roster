@@ -4,3 +4,30 @@
   color: white;
   margin: 10px; 
 }
+
+.btn-warning{
+  color: white;
+  background-color: $utOrange;
+  border-color: $utOrange;
+  font-weight: bold;
+}
+
+.btn-warning.focus, .btn-warning:focus {
+  background-color: rgb(255, 186, 58);
+  border-color: rgb(233, 152, 3);
+}
+
+.btn-warning:hover {
+  color: black;
+  background-color: rgb(255, 167, 66);
+}
+
+.btn-warning:focus {
+  color: black;
+  background-color: orange;
+}
+
+.btn-warning:active {
+  color: black;
+  background-color: rgb(255, 187, 0);
+}

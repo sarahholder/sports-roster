@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import firebase from 'firebase';
 import 'firebase/auth';
 
-import './theNav.scss';
+import './TheNav.scss';
 
 class TheNav extends React.Component {
 static propTypes = {
@@ -21,7 +21,7 @@ render() {
   return (
     <div className="MyNavbar">
       <nav className="navbar navbar-light bg-light p-0">
-        <div className="navbar-brand p-0">UT Volunteers</div>
+        <div className="navbar-brand p-0 ml-4">UT Volunteers</div>
               {
                 authed
                   ? <button className="btn btn-dark logout m-2" onClick={this.logMeOut}>Logout</button>
