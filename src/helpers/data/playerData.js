@@ -25,4 +25,11 @@ const deletePlayer = (playerId) => axios.delete(`${baseUrl}/roster/${playerId}.j
 
 const saveNewPlayer = (newPlayer) => axios.post(`${baseUrl}/roster.json`, newPlayer);
 
-export default { getPlayerByUid, deletePlayer, saveNewPlayer };
+const updatePlayer = (playerId, updatedPlayer) => axios.put(`${baseUrl}/roster/${playerId}.json`, updatedPlayer);
+
+export default {
+  getPlayerByUid,
+  deletePlayer,
+  saveNewPlayer,
+  updatePlayer,
+};
