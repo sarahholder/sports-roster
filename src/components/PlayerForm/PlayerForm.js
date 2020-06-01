@@ -9,6 +9,8 @@ import './PlayerForm.scss';
 class PlayerForm extends React.Component {
   static propTypes = {
     saveNewPlayer: PropTypes.func.isRequired,
+    putPlayer: PropTypes.func.isRequired,
+    player: PropTypes.object.isRequired,
   }
 
 state = {
@@ -17,6 +19,21 @@ state = {
   position: '',
   number: '',
   area: '',
+  isEditing: false,
+}
+
+componentDidMount() {
+  const { player } = this.props;
+  if (player.name) {
+    this.setState({
+      imageUrl: player.imageUrl,
+      name: player.name,
+      position: player.position,
+      number: player.number,
+      area: player.area,
+      isEditing: true,
+    });
+  }
 }
 
 imageUrlChange = (e) => {
@@ -46,7 +63,6 @@ areaChange = (e) => {
 
 savePlayer =(e) => {
   e.preventDefault();
-  console.log('damn button pushed');
   const {
     imageUrl,
     name,
@@ -63,9 +79,28 @@ savePlayer =(e) => {
     area,
     uid: authData.getUid(),
   };
-
-
   saveNewPlayer(newPlayer);
+}
+
+updatePlayer = (e) => {
+  e.preventDefault();
+  const { player, putPlayer } = this.props;
+  const {
+    imageUrl,
+    name,
+    position,
+    number,
+    area,
+  } = this.state;
+  const updatedPlayer = {
+    imageUrl,
+    name,
+    position,
+    number,
+    area,
+    uid: authData.getUid(),
+  };
+  putPlayer(player.id, updatedPlayer);
 }
 
 render() {
@@ -75,6 +110,7 @@ render() {
     position,
     number,
     area,
+    isEditing,
   } = this.state;
 
   return (
@@ -103,7 +139,7 @@ render() {
               onChange={this.imageUrlChange}
               />
           </div>
-          <div className="form-group col-lg-4">
+          <div className="form-group col-lg-2">
             <label htmlFor="player-position"></label>
             <input
               type="text"
@@ -128,16 +164,19 @@ render() {
           <div className="form-group col-lg-2">
             <label htmlFor="player-number"></label>
             <input
-              type="number"
+              type= "number"
               className="form-control playerNumber"
               id="player-number"
               placeholder="Number"
-              value={number}
+              value= {number}
               onChange={this.numberChange}
               />
           </div>
           <div className="col-lg-2 saveMargin">
-            <button className="btn btn-warning saveBtn" onClick={this.savePlayer}>Save</button>
+            { isEditing
+              ? <button className="btn btn-warning saveBtn" onClick={this.updatePlayer}>Update</button>
+              : <button className="btn btn-warning saveBtn" onClick={this.savePlayer}>Save</button>
+            }
           </div>
       </form>
     </div>

@@ -46,6 +46,7 @@ class App extends React.Component {
       <div className="App">
         <TheNav authed={authed}/>
         {loadComponent()}
+        <img className="img-fluid" width="100%" src="https://utsports.com/images/2019/8/7/2020_Schedule_Release_Web.jpg?width=1061&height=597&mode=crop" alt="ut football schedule "/>
       </div>
     );
   }
