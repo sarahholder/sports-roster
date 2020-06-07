@@ -75,7 +75,7 @@ savePlayer =(e) => {
     imageUrl,
     name,
     position,
-    number,
+    number: number * 1,
     area,
     uid: authData.getUid(),
   };
@@ -96,7 +96,7 @@ updatePlayer = (e) => {
     imageUrl,
     name,
     position,
-    number,
+    number: number * 1,
     area,
     uid: authData.getUid(),
   };
