@@ -61,6 +61,7 @@ render() {
 
   return (
     <div className="Team">
+      <img className="img-fluid" width="100%" src="https://utsports.com/images/2019/8/7/2020_Schedule_Release_Web.jpg?width=1061&height=597&mode=crop" alt="ut football schedule "/>
       <button className="btn btn-warning m-2 mt-3" onClick={() => this.setState({ formOpen: true })}><i className="fas fa-plus"></i> New Player</button>
       { formOpen ? <PlayerForm playerId={playerId} saveNewPlayer={this.saveNewPlayer} player={editPlayer} putPlayer={this.putPlayer}/> : ''}
       { formOpen ? <button className="btn btn-warning m-2 mt-3" onClick={() => this.setState({ formOpen: false, editPlayer: {} })}>Close</button> : ''}
